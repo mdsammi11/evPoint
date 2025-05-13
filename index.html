@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evPoint</title>
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!----------------- leaflet ------------------>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+    <link rel="stylesheet" href="./src/leaflet-routing-machine.css" />
+    <script src="./src/leaflet-routing-machine.js"></script>
+    <!--================ leaflet ==================-->
+    <link rel="shortcut icon" href="./img/logo_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/media.css">
+    <script src="./src/app.js" defer></script>
+</head>
+
+<body>
+    <div class="clear-search btn-nf hide"><button>clear search</button></div>
+    <div class="clear-route btn-nf hide"><button>clear route</button></div>
+    <div class="locate btn-nf"><button><img src="./img/icon/location.png" width="30px" alt=""></button></div>
+    <div id="app">
+        <div id="nav" class="section">
+            <div class="logo">
+                <img src="./img/logo.png" height="70px" alt="">
+            </div>
+            <div class="buttons">
+                <a class="btn create-ev" href="./admin.html">Garage</a>
+                <a class="btn create-garage" href="./admin.html">EV</a>
+            </div>
+        </div>
+        <div id="side_bar" class="section">
+            <div class="buttons">
+                <button class="btn ev-filter">EV</button>
+                <button class="btn garage-filter">Garages</button>
+            </div>
+            <div class="nearest_points ">
+                <ul class="points ">
+                    <!-- <li class="point">
+                        <div class="name">FX chargin station</div>
+                        <div class="capacity">tottal <span class="tottal">50</span> available <span class="aval">30</span></div>
+                        <div class="state open">Open</div>
+                        <div class="closing_time">closing time <span class="time">11pm</span></div>
+                        <div class="distance">Distance <span class="km">15km</span></div>
+                        <div class="location">Kolkata, west bengal</div>
+                        <div class="options"><span class="two"><img width="25px" src="./img/bycicle.png" alt=""> </span><span class="four"><img height="25px" src="./img/electric-car.png" alt=""></span></div>
+                    </li>
+                    <li class="point">
+                        <div class="name">FX chargin station</div>
+                        <div class="capacity">tottal <span class="tottal">50</span> available <span class="aval">30</span></div>
+                        <div class="state open">Open</div>
+                        <div class="closing_time">closing time <span class="time">11pm</span></div>
+                        <div class="distance">Distance <span class="km">15km</span></div>
+                        <div class="location">Kolkata, west bengal</div>
+                        <div class="options"><span class="two"><img width="25px" src="./img/bycicle.png" alt=""> </span><span class="four"><img height="25px" src="./img/electric-car.png" alt=""></span></div>
+                    </li>
+                    <li class="point">
+                        <div class="name">FX chargin station</div>
+                        <div class="capacity">tottal <span class="tottal">50</span> available <span class="aval">30</span></div>
+                        <div class="state open">Open</div>
+                        <div class="closing_time">closing time <span class="time">11pm</span></div>
+                        <div class="distance">Distance <span class="km">15km</span></div>
+                        <div class="location">Kolkata, west bengal</div>
+                        <div class="options"><span class="two"><img width="25px" src="./img/bycicle.png" alt=""> </span><span class="four"><img height="25px" src="./img/electric-car.png" alt=""></span></div>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="details hide">
+                <div class="image"><img src="./img/logo.png" alt=""></div>
+                <div class="alldetails">
+                    <ul class="details_list">
+                        <li class="name">HX Charging station</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="map" class="section"></div>
+    </div>
+</body>
+
+</html>
